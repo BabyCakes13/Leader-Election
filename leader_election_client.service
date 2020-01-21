@@ -1,0 +1,12 @@
+[Unit]
+Description=Leader Election Client
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/bin
+ExecStart=/usr/bin/python3 /usr/local/bin/leader_election_client.py parameters
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
